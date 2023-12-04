@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Poppins:wght@300&display=swap')
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --primary-color: #101820FF;
+    --secondary-color: #FEE715FF;
+}
+body{
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--secondary-color);
+    position: relative;
+}
+.header nav{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0 2rem;
+}
+.header .menu{
+    font-size: 25px;
+    display: none;
+}
+.header nav img{
+    width: 150px;
+}
+.header nav ul{
+    display:flex;
+}
+.header nav li{
+    list-style: none;
+    margin:0 5px;
+}
+.header nav li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.2rem 1rem;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--primary-color);
+    position:relative;
+    z-index:1;
+}
+.header nav li a::before{
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:var(--primary-color);
+    border-radius: 20px;
+    z-index: -1;
+    transition: 0.3s linear;
+}
+.header nav li a:hover:before{
+    width: 100%;
+}.header nav li a:hover{
+    color:white;
+}
+.header .main{
+    text-align: center;
+}
+.header .main h1{
+    font-size: 2.5rem;
+    font-family: 'Bodoni Moda', serif;
+    margin-bottom: 1.2rem;
+}
+.header .main a{
+    text-decoration: none;
+    width: 350px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    transition: 0.5s;
+}
+.header .main a:hover{
+    background: transparent;
+    color: black;
+}
+svg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+}
+.header .right-box{
+    position: absolute;
+    right: 8%;
+    bottom:20%;
+}
+header .right-box img{
+    width: 60%;
+}
+/* header section complete */
+/* service section */
+
+.service{
+    padding-top: 1rem;
+    width: 80%; 
+    margin: auto;
+    text-align: center;
+}
+h2{
+    font-size: 2.5rem;
+    color: white;
+    font-family: 'Bodoni Moda', serif;
+}
+p{
+    color: white;
+    Font-size: 14px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+.service .service-col{
+    flex-basis: 30%;
+    border: 1px solid var(--secondary-color);
+    color: white;
+    margin: 5% 0;
+    padding: 1rem 0.5rem;
+    position: relative;
+}
+.service .service-offer{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 10%;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50px);
+}
+.service .service-offer img{
+    width: 30%;
+}
+.service h4{
+    font-size: 1.3rem;
+    margin-top: 25%;
+    text-align: center;
+}
+/* service section complete */
+/* package section  */
+
+.package{
+    padding-top: 5%;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.package .package-col{
+    flex-basis: 25%;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    box-shadow: -2px 5px 5px rgba(254,231,21,0.3);
+}
+.package .package-col .heading{
+    border-radius: 10px;
+    padding: 1.5rem 0;
+    background-color: var(--secondary-color);
+    font-size: 25px;
+    font-weight: 900;
+}
+.package .package-col .list{
+    margin-top: 10px;
+    padding: 1 rem 3rem;
+}
+.package-col li{
+    list-style: none;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 5px;
+    position: relative;
+}
+.package-col li::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 25%;
+    left: -25px;
+}
+.package-col hr{
+    height: 2px;
+    background-color: var(--primary-color);
+}
+.package-col p{
+    margin-top: 5%;
+    color: black;
+    font-size: 30px;
+    font-weight: 900;
+}
+/* care section */
+
+.care{
+    padding-top: 5%;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.care-col{
+    flex-basis: 23%;
+    margin-bottom: 5%;
+    border-radius: 1rem;
+    box-shadow: -3px 5px 5px rgba(255,255,255,0.4);
+    position: relative;
+}
+.care-col img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+.care .overlay{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    border-radius: 1rem;
+    background: linear-gradient(rgba(0,0,0,0.7),var(--secondary-color));
+    transition: 0.5s;
+}
+.care-col:hover .overlay{
+    height: 100%;
+}
+.overlay h3{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Bodoni Moda', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0%;
+}
+.overlay:hover h3{
+    opacity: 1;
+}
+
+/* customer section */
+.customer-say{
+    padding-top:5%;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.customer-say .customer-say-col{
+    flex-basis:25%;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    margin-bottom: 5%;
+    display: flex;
+    box-shadow: 0px 5px 3px rgba(255,255,255,0.4);
+    transition: 0.5s;
+}
+.customer-say .customer-say-col:hover{
+    transform: scale(1.1);
+}
+.customer-say .customer-say-col p{
+    color: black;
+    padding: 0;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+}
+.customer-say .customer-say-col img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin: 0 20px 0 10px;
+}
+.customer-say .customer-say-col span{
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: right;
+}
+
+/* footer section */
+.footer{
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+.footer img{
+    padding: 1.3rem 0;
+    border-radius: 50%;
+}
+.footer p{
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 50px;
+}
